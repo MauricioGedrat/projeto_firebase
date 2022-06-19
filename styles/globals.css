@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -13,4 +17,57 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.detal {
+  position: absolute;
+  width: 20px;
+  height: 80vh;
+  background: #ce2222;
+  left: 1.75rem;
+  bottom: 0;
+}
+
+.detal::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 70vh;
+  background: #ef4444;
+  bottom: 0;
+  left: 1.75rem;
+}
+
+.detal-2 {
+  position: absolute;
+  width: 20px;
+  height: 80vh;
+  background: #ce2222;
+  left: 5.25rem;
+  top: 0;
+}
+.detal-2::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 70vh;
+  background: #ef4444;
+  top: 0;
+  left: 1.75rem;
+}
+@media (max-width: 700px) {
+  .detal {
+    display: none;
+  }
+  .detal-2 {
+    display: none;
+  }
+  .form {
+    margin-top: 30%;
+  }
+}
+@media (max-width: 550px) {
+  .form {
+    margin-top: 50%;
+  }
 }
